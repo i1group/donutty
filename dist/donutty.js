@@ -21,7 +21,7 @@
     }
 
     function truth( input ) {
-        return isDefined( input ) && ( input === true || input === "true" );
+        return isDefined( input ) && ( input === true || input === "true" || input === "1"  || input === 1 );
     }
 
     donutty = win.Donutty = function( el, options ) {
@@ -185,7 +185,7 @@
         this.$svg.setAttribute( "viewbox", "0 0 " + viewbox + " " + viewbox );
         this.$svg.setAttribute( "transform", "rotate( " + rotate +" )" );
         this.$svg.classList.add( "donut" );
-        this.$svg.style.width = viewbox + "px";
+        this.$svg.style.width  = viewbox + "px";
         this.$svg.style.height = viewbox + "px";
 
         return this;
